@@ -1,5 +1,7 @@
 package com.cOmpito110423.cOmpito110423;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,8 +14,10 @@ import conguration.Pizza;
 
 @SpringBootApplication
 public class COmpito110423Application {
+    static final Logger logger = LoggerFactory.getLogger(COmpito110423Application.class);
 
     public static void main(String[] args) {
+
 	SpringApplication.run(COmpito110423Application.class, args);
 	System.out.println("LE PIZZE CHE PUOI ACQUISTARE SONO: ");
 	configWith_Beans2();
@@ -23,6 +27,12 @@ public class COmpito110423Application {
 	configWith_Beans3();
 	System.out.println("I GADGET CHE PUOI ACQUISTARE SONO: ");
 	configWith_Beans4();
+
+	logger.trace("ciao luca");
+	logger.debug("ciao benny");
+	logger.info("ciao andrea");
+	logger.warn("ciao filippo");
+	logger.error("ciao carlo");
     }
 
     public static void configWith_Beans1() {
